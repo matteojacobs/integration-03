@@ -225,6 +225,10 @@ h2 {
   border-block-start: 1px solid rgba(0, 0, 0, var(--opacity-dim));
 }
 
+.hero__image--gif {
+  display: none;
+}
+
 
 
 
@@ -254,34 +258,31 @@ h2 {
   }
 
 /* ===== Navigation ===== */
-  .hero {
-  padding-block-end: 2rem;
-}
+
 
 .hero__navigation {
-  padding: 0.5rem
+  position: relative;
 }
 
 .hero__navigation--list {
-  width: 70%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  text-align: center;
-
-}
+    display: flex;
+    justify-content: flex-end !important;
+    align-items: center;
+    text-align: center;
+    width: 60%; 
+    margin-inline-start: auto;
+   
+  }
 
 /* Navigation items styling */
 .navigation__item {
   border: none;
   color: var(--color-text);
   font-size: 1.1rem;
-  margin: 0 2rem;
+  margin: 0 1rem;
   transition: color 0.3s;
   line-height: 1.2;
 }
-
-
 
 /* Hover effects */
 .navigation__item:hover {
@@ -289,11 +290,15 @@ h2 {
   
 }
 
-
-
 /* ===== Hamburger ===== */
 .hamburger {
     display: none; /* Hidden by default */
+}
+
+
+
+.hero__image--gif {
+  display: block;
 }
 
 

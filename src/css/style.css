@@ -1,29 +1,100 @@
+/* ===== root ===== */
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --color-primary: #B21D3B;
+  --color-black: #1E1E1E;
+  --color-white: #FFF8F8;
+  
+  --opacity-dim: 0.45;
+  --opacity-full: 1;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --font-heading: "carol-gothic", sans-serif;
+  --font-body: "EB Garamond", serif;
+  
+  --fs-base: clamp(1rem, 0.96rem + 0.18vw, 1.125rem); /* 16px-18px */
+  --fs-h1: clamp(8rem, 4rem + 12vw, 14.375rem); /* ~230px */
+  --fs-h1-special: clamp(8.75rem, 4.375rem + 13.125vw, 15.625rem); /* ~250px */
+  --fs-h2: clamp(2.5rem, 1.25rem + 4vw, 4rem); /* ~64px */
+  
+  --lh-body: 1.6;
+  
+  --space-base: 1rem;
+  --space-xs: calc(var(--space-base) * 0.5);
+  --space-sm: calc(var(--space-base) * 1);
+  --space-md: calc(var(--space-base) * 1.5);
+  --space-lg: calc(var(--space-base) * 2);
+  
+  --radius-btn: 5px;
+  
+  --bp-mobile: 48em; 
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* ===== Dark Mode (Default) ===== */
+  --color-bg: var(--color-black);
+  --color-text: var(--color-white);
+  --color-accent: var(--color-primary);
+
 }
 
-
-
-@media (prefers-color-scheme: light) {
+/* ===== Light Mode (Future Implementation) ===== */
+/* @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    --color-bg: var(--color-white);
+    --color-text: var(--color-black);
   }
-  a:hover {
-    color: #747bff;
+} */
+
+/* ===== Base Styles ===== */
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+/* ===== Typography ===== */
+h1 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h1);
+}
+
+.hero__title--specialLetter {
+  font-size: var(--fs-h1-special);
+  color: var(--color-primary);
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2);
+}
+
+/* ===== Responsive Breakpoints ===== */
+@media (max-width: 48em) {
+  :root {
+    --fs-h1: clamp(4.5rem, 4rem + 6vw, 6rem);
+    --fs-h2: clamp(2rem, 1.5rem + 2vw, 2.5rem);
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+/* ===== Print Styles ===== */
+@media print {
+  :root {
+    --color-bg: transparent;
+    --color-text: #000;
+  }
+  
+  img {
+    display: none !important;
+  }
+}
+
+/* ===== Accessibility ===== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }

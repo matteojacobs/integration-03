@@ -1,5 +1,8 @@
+
+
 // Hamburger menu functionality
 const hamburger = document.querySelector(".hamburger");
+hamburger.classList.remove("no-js")
 const navList = document.querySelector(".hero__navigation--list");
 
 hamburger.addEventListener("click", () => {

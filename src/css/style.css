@@ -3,6 +3,8 @@
   --color-primary: #B21D3B;
   --color-black: #1E1E1E;
   --color-white: #FFF8F8;
+
+  --color-radiant: radial-gradient(50% 50% at 50% 50%, rgba(178, 29, 59, 0.40) 0%, rgba(178, 29, 59, 0.00) 100%);
   
   --opacity-dim: 0.45;
   --opacity-full: 1;
@@ -13,7 +15,8 @@
   --fs-base: clamp(1rem, 0.96rem + 0.18vw, 1.125rem); /* 16px-18px */
   --fs-h1-special: clamp(8.75rem, 4.375rem + 13.125vw, 15.625rem); /* ~250px */
 
-  --fs-h1: clamp(8rem, 4rem + 12vw, 14.375rem); /* ~230px */  --fs-h2: clamp(2rem, 1.5rem + 2vw, 2.5rem);
+  --fs-h1: clamp(8rem, 4rem + 10vw, 14.375rem); /* ~230px */  
+  --fs-h2: clamp(2rem, 1.5rem + 2vw, 2.5rem);
   
   --lh-body: 1.6;
   
@@ -102,13 +105,17 @@ p {
 
 
 
+
+
 .hero {
   height: 100vh;
   width: 100vw;
-  background-image: url(/assets/heroReplacement.png);
+  background: url(/assets/heroReplacement.png), var(--color-radiant);
+  
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 80vw auto;
+  background-position: center, 100% 100%;
+  background-size: contain, 50rem 50rem;
+  
 }
 
 .hero__content {
@@ -134,16 +141,17 @@ p {
 }
 
 .hero__paragraph {
-  margin-block-start: 20vh;
+  margin-block-start: 12rem;
 }
 
 .hero__paragraph, .hero__button {
-  margin-inline-start: 6rem;  
+  margin-inline-start: 4rem;  
   max-width: 20rem;
 }
 
 .hero__button {
-  width: 6rem;
+  width: auto;
+  max-width: 8rem;
   background-color: var(--color-primary);
   padding: 0.5rem;
   border-radius: 0.25rem;
@@ -393,9 +401,10 @@ p {
 
 
 .hero {
-  background-image: url(/public/assets/heroGif.gif);
-  background-position: 90% 25%;
-  background-size: 45vw auto;
+  background-image: url(/public/assets/heroGif.gif), var(--color-radiant);
+   /* background-position: 100% 100%; */
+   background-position: 50vw 10vh, 100% 40%;
+  background-size: 55vw auto, 40vw 40vw;
 }
 
 .hero__content {
@@ -419,7 +428,7 @@ p {
 
 /* Reset margins for desktop layout */
 .hero__title {
-  margin-block-start: 10vh;
+  margin-block-start: 0;
   /* justify-content: flex-start; */
 }
 

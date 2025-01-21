@@ -101,7 +101,7 @@ p {
 
 .hero {
   width: 100vw;
-  background: url("./assets/heroReplacement.png"), var(--color-radiant);
+  background: url("/assets/heroReplacement.png"), var(--color-radiant);
 
   background-repeat: no-repeat;
   background-position: relative, 100% 100%;
@@ -342,7 +342,7 @@ p {
   }
 
   .hero {
-    background-image: url("./assets/heroGif.gif"), var(--color-radiant);
+    background-image: url("/assets/heroGif.gif"), var(--color-radiant);
     /* background-position: 100% 100%; */
     background-position: 50vw 10vh, 100% 40%;
     background-size: 55vw auto, 40vw 40vw;

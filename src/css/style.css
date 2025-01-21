@@ -102,7 +102,7 @@ p, .hero__button {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  background-image: url(/public/assets/heroReplacement.png);
+  background-image: url(/assets/heroReplacement.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80vw auto;

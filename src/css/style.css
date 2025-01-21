@@ -34,6 +34,7 @@
 
 }
 
+
 /* ===== Light Mode (Future Implementation) ===== */
 /* @media (prefers-color-scheme: light) {
   :root {
@@ -69,7 +70,7 @@ h1 {
   color: var(--color-primary);
 }
 
-.ChapterI__title--specialLetter, .ChapterII__title--specialLetter, .ChapterIII__title--specialLetter, .ChapterIV__title--specialLetter {
+.chapterI__title--specialLetter, .chapterII__title--specialLetter, .chapterIII__title--specialLetter, .chapterIV__title--specialLetter {
   color: var(--color-primary);
 }
 
@@ -86,6 +87,10 @@ p {
   margin-block-end: 1rem;
 }
 
+/* .hero__navigation {
+  margin-inline: 1rem;
+} */
+
 
 
 
@@ -98,7 +103,7 @@ p {
 
 
 .hero {
-  height: 90vh;
+  height: 100vh;
   width: 100vw;
   background-image: url(/assets/heroReplacement.png);
   background-repeat: no-repeat;
@@ -388,32 +393,48 @@ p {
 
 
 .hero {
-  background-image: none;
-  display: grid;
-  grid-template-columns: 50vw 50vw;
-  grid-template-rows: auto auto;
-  position: relative;
+  background-image: url(/public/assets/heroGif.gif);
+  background-position: 90% 25%;
+  background-size: 45vw auto;
 }
 
-.hero__navigation {
-  grid-column: 1 / -1;
-  grid-row: 1;
+.hero__content {
+  flex-direction: row;
+  align-items: flex-start;
+  margin-inline: 4rem;
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  text-align: left; /* Left margin from original mobile styles */
 }
 
+  /* Style text container */
+.hero__content--text {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  text-align: left; /* Left margin from original mobile styles */
+  width: 60%;
+}
+
+/* Reset margins for desktop layout */
 .hero__title {
-  grid-column: 1;
-  grid-row: 2;
+  margin-block-start: 10vh;
+  /* justify-content: flex-start; */
 }
 
-.hero__paragraph {
-  grid-column: 1;
-  grid-row: 2;
+.hero__paragraph{
+  margin-block-start: 4rem;
+  max-width: 28rem;
 }
 
+.hero__paragraph,
 .hero__button {
-  grid-column: 1;
-  grid-row: 2;
+  
+  margin-inline-start: 8rem;
 }
+
+
 
 
 

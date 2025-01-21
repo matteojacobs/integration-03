@@ -13,8 +13,7 @@
   --fs-base: clamp(1rem, 0.96rem + 0.18vw, 1.125rem); /* 16px-18px */
   --fs-h1-special: clamp(8.75rem, 4.375rem + 13.125vw, 15.625rem); /* ~250px */
 
-  --fs-h1: clamp(4.5rem, 4rem + 6vw, 6rem);
-  --fs-h2: clamp(2rem, 1.5rem + 2vw, 2.5rem);
+  --fs-h1: clamp(8rem, 4rem + 12vw, 14.375rem); /* ~230px */  --fs-h2: clamp(2rem, 1.5rem + 2vw, 2.5rem);
   
   --lh-body: 1.6;
   
@@ -62,7 +61,7 @@ body {
 h1 {
   font-family: var(--font-heading);
   font-size: var(--fs-h1);
-  line-height: 0.9;
+  line-height: 0.7;
 }
 
 .hero__title--specialLetter {
@@ -82,6 +81,10 @@ h2 {
   justify-content: center;
 }
 
+p, .hero__button {
+  margin-inline: 4rem;
+  margin-block-end: 2rem;
+}
 
 
 
@@ -96,6 +99,46 @@ h2 {
 
 
 
+.hero {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-image: url(/public/assets/heroReplacement.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80vw auto;
+  
+  
+}
+
+.hero__title {
+  display: flex;
+  justify-content: center;
+  margin-block-start: 20vh;
+}
+
+.hero__paragraph{
+  max-width: 22rem;
+  margin-block-start: auto;
+  margin-block-end: 1rem;
+}
+
+.hero__button {
+  width: 6rem;
+  background-color: var(--color-primary);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  color: var(--color-white);
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-block-end: 20vh;
+}
+
+.hero__button:hover {
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
 
 
 .hero__navigation--list {
@@ -283,7 +326,7 @@ h2 {
 /* ===== Responsive Breakpoints ===== */
 @media (min-width: 48rem) {
 :root {
-    --fs-h1: clamp(8rem, 4rem + 12vw, 14.375rem); /* ~230px */
+    
     --fs-h2: clamp(2.5rem, 1.25rem + 4vw, 4rem); /* ~64px */
   }
 
@@ -309,7 +352,6 @@ h2 {
   border: none;
   color: var(--color-text);
   font-size: 1.1rem;
-  margin: 0 1rem;
   transition: color 0.3s;
   line-height: 1.2;
 }

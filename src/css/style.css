@@ -97,8 +97,6 @@ p, .hero__button {
 
 
 
-
-
 .hero {
   height: 100vh;
   width: 100vw;
@@ -361,6 +359,53 @@ p, .hero__button {
   color: var(--color-primary);
   
 }
+
+
+
+
+
+.hero {
+  background-image: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  position: relative;
+}
+
+.hero__navigation {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+.hero__title {
+  grid-column: 1;
+  grid-row: 2;
+  margin-inline-start: 8rem;
+  margin-block-end: 4rem;
+}
+
+.hero__paragraph {
+  grid-column: 1;
+  grid-row: 3;
+  margin-inline-start: 8rem;
+  margin-block-end: 4rem;
+}
+
+.hero__button {
+  grid-column: 1;
+  grid-row: 4;
+  margin-inline-start: 8rem;
+}
+
+.hero__image--gif {
+  grid-column: 2;
+  grid-row: 2 / 5;
+  justify-self: end;
+  align-self: center;
+  max-width: 100%;
+  height: auto;
+}
+
 
 /* ===== Hamburger ===== */
 .hamburger {

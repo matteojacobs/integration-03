@@ -71,6 +71,10 @@ h1 {
   line-height: 0.7;
 }
 
+li {
+  font-size: var(--fs-base);
+}
+
 .hero__title--specialLetter {
   font-size: var(--fs-h1-special);
   color: var(--color-primary);
@@ -98,7 +102,6 @@ p {
 }
 
 .background__text {
-  overflow: hidden;
   color: #000000;
   font-size: var(--fs-background);
   opacity: var(--opacity-dim);
@@ -109,6 +112,7 @@ p {
   font-family: var(--font-heading);
   text-align: center;
   z-index: -1;
+  max-width: 100vw;
 }
 
 /* .hero__navigation {
@@ -306,9 +310,8 @@ p {
   text-decoration: none !important;
   display: flex;
   justify-content: center;
-
   width: 100%;
-  padding-block: 2rem;
+  padding-block: 5vh;
   border-block-end: 1px solid rgba(0, 0, 0, var(--opacity-dim));
 }
 
@@ -331,6 +334,10 @@ p {
   margin-inline: auto;
   max-width: 80vw;
   text-align: center;
+}
+
+.background__text--grid {
+  display: none;
 }
 
 .chapterI__image {

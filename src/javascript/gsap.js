@@ -60,20 +60,36 @@ const initNavAnimations = () => {
 
 
 
-// Animate paragraphs
-gsap.utils.toArray('.chapterI__section').forEach((section) => {
-  gsap.from(section, {
-    opacity: 0.3,
-    x: -20,
-    duration: 0.5,
-    scrollTrigger: {
-      trigger: section,
-      start: 'bottom 100%', // Start animation when the top of the paragraph is 80% in the viewport
-      
-      toggleActions: 'play none none reverse', // Play animation on enter, reverse on leave
-    },
+gsap.utils
+  .toArray(".chapterI__section--1, .chapterI__section--2")
+  .forEach((section) => {
+    gsap.from(section, {
+      opacity: 0.3,
+      x: -20,
+      duration: 1.5,
+      scrollTrigger: {
+        trigger: section,
+        start: "top 95%",
+        toggleActions: "play none none reverse",
+      },
+    });
   });
-});
+
+// Animate paragraphs --3 and --4
+gsap.utils
+  .toArray(".chapterI__paragraph--3, .chapterI__paragraph--4")
+  .forEach((paragraph) => {
+    gsap.from(paragraph, {
+      opacity: 0.3,
+      x: -20,
+      duration: 1.5,
+      scrollTrigger: {
+        trigger: paragraph,
+        start: "top 95%",
+        toggleActions: "play none none reverse",
+      },
+    });
+  });
 
 
 
@@ -82,32 +98,32 @@ gsap.utils.toArray('.chapterI__section').forEach((section) => {
 
 
 // Create the main timeline
-const chapterIAnimation = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".chapterI__section--2",
-    start: "bottom 100%",
-    scrub: 1,
-    pin: true,
-    markers: false, // Set to true for debugging
-    anticipatePin: 1,
-  },
-});
+// const chapterIAnimation = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".chapterI__section--2",
+//     start: "bottom 100%",
+//     scrub: 1,
+//     pin: true,
+//     markers: false, // Set to true for debugging
+//     anticipatePin: 1,
+//   },
+// });
 
-// Add animations to the timeline
-chapterIAnimation
-  .to(".chapterI__image--2", {
-    scale: 10,
-    duration: 2,
-    ease: "power2.inOut"
-  })
-  .to(".chapterI__section--2", {
-    opacity: 0,
-    duration: 1,
-    ease: "power2.out"
-  }, "-=0.5") // Overlap with previous animation
-  .from(".chapterI__image--3", {
-    scale: 0,
-    opacity: 0,
-    duration: 1.5,
-    ease: "power2.out"
-  }, "<0.5"); // Start 0.5 seconds before previous animation ends
+// // Add animations to the timeline
+// chapterIAnimation
+//   .to(".chapterI__image--2", {
+//     scale: 10,
+//     duration: 2,
+//     ease: "power2.inOut"
+//   })
+//   .to(".chapterI__section--2", {
+//     opacity: 0,
+//     duration: 1,
+//     ease: "power2.out"
+//   }, "-=0.5") // Overlap with previous animation
+//   .from(".chapterI__image--3", {
+//     scale: 0,
+//     opacity: 0,
+//     duration: 1.5,
+//     ease: "power2.out"
+//   }, "<0.5"); // Start 0.5 seconds before previous animation ends

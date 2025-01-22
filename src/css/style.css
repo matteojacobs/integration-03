@@ -305,109 +305,18 @@ p {
 }
 
 .chapterI {
-  margin-block-start: 8rem;
+  margin-block: 4rem;
+}
+.chapterI__title {
+  margin-block: 2rem;
 }
 
-/* ===== Responsive Breakpoints ===== */
-@media (min-width: 48rem) {
-  :root {
-    --fs-h2: clamp(2.5rem, 1.25rem + 4vw, 4rem); /* ~64px */
-  }
-
-  /* ===== Navigation ===== */
-
-  .hero__navigation {
-    position: relative;
-  }
-
-  .hero__navigation--list {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    width: 60%;
-    margin-inline-start: auto;
-  }
-
-  /* Navigation items styling */
-  .navigation__item {
-    border: none;
-    color: var(--color-text);
-    transition: color 0.3s;
-  }
-
-  /* Hover effects */
-  .navigation__item:hover {
-    color: var(--color-primary);
-  }
-
-  .hero {
-    background-image: url("/assets/heroGif.gif"), var(--color-radiant);
-    /* background-position: 100% 100%; */
-    background-position: 50vw 10vh, 100% 40%;
-    background-size: 55vw auto, 40vw 40vw;
-    background-repeat: no-repeat;
-  }
-
-  .hero__content {
-    flex-direction: row;
-    align-items: flex-start;
-    margin-inline: 4rem;
-    display: flex;
-    flex-direction: column;
-    /* align-items: flex-start; */
-    text-align: left; /* Left margin from original mobile styles */
-  }
-
-  /* Style text container */
-  .hero__content--text {
-    display: flex;
-    flex-direction: column;
-    /* align-items: flex-start; */
-    text-align: left; /* Left margin from original mobile styles */
-    width: 60%;
-  }
-
-  /* Reset margins for desktop layout */
-  .hero__title {
-    margin-block-start: 0;
-    /* justify-content: flex-start; */
-  }
-
-  .hero__paragraph {
-    margin-block-start: 4rem;
-    max-width: 35vw;
-  }
-
-  .hero__paragraph,
-  .hero__button {
-    margin-inline-start: 8rem;
-  }
-
-  /* ===== Hamburger ===== */
-  .hamburger {
-    display: none; /* Hidden by default */
-  }
-
-  .hero__image--gif {
-    display: block;
-  }
+.chapterI__image {
+  width: 100%;
+  height: auto;
+}
+.chapterI__paragraph {
+  margin-block-end: 2rem;
 }
 
-/* ===== Print Styles ===== */
-@media print {
-  :root {
-    --color-bg: transparent;
-    --color-text: #000;
-  }
 
-  img {
-    display: none !important;
-  }
-}
-
-/* ===== Accessibility ===== */
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-}

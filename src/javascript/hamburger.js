@@ -26,3 +26,6 @@ window.addEventListener("resize", () => {
     navList.classList.remove("hero__navigation--list--active");
   }
 });
+
+
+

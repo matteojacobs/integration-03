@@ -34,7 +34,7 @@
   }
 
   .hero {
-    background-image: url("/src/assets/herogif.gif"), var(--color-radiant);
+    background-image: url("assets/herogif.gif"), var(--color-radiant);
     /* background-position: 100% 100%; */
     background-position: 50vw 0rem, 60vw 40%;
     /* background-size: 55vw auto, 40vw 40vw; */

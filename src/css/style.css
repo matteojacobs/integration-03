@@ -295,6 +295,7 @@ p {
   padding-block: 2rem;
   border-block-end: 1px solid rgba(0, 0, 0, var(--opacity-dim));
 }
+.chapterI{}
 
 .navigation__item-wrapper:first-child > .navigation__item {
   border-block-start: 1px solid rgba(0, 0, 0, var(--opacity-dim));

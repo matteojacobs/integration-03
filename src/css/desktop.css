@@ -17,6 +17,10 @@
     margin-inline-start: auto;
   }
 
+  .no_js {
+    display: none;
+  }
+
   /* Navigation items styling */
   .navigation__item {
     border: none;

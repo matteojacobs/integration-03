@@ -101,7 +101,7 @@ p {
 
 .hero {
   width: 100vw;
-  background: url("../assets/heroReplacement.png");
+  background: url("../assets/heroreplacement.png");
   background-position: relative, 100% 100%;
   background-size: contain, 50rem 50rem;
   background-repeat: no-repeat;

@@ -101,7 +101,7 @@ p {
 
 .hero {
   width: 100vw;
-  background: url("../assets/heroreplacement.png");
+  background: url("./assets/heroreplacement.png");
   background-position: relative, 100% 100%;
   background-size: contain, 50rem 50rem;
   background-repeat: no-repeat;
@@ -242,6 +242,8 @@ p {
   display: none;
 }
 
+
+
 .hamburger.no-js ~ .hero__navigation--list {
   display: flex;
   width: 100%;
@@ -295,7 +297,6 @@ p {
   padding-block: 2rem;
   border-block-end: 1px solid rgba(0, 0, 0, var(--opacity-dim));
 }
-.chapterI{}
 
 .navigation__item-wrapper:first-child > .navigation__item {
   border-block-start: 1px solid rgba(0, 0, 0, var(--opacity-dim));

@@ -10,7 +10,7 @@
     rgba(178, 29, 59, 0) 100%
   );
 
-  --opacity-dim: 0.45;
+  --opacity-dim: 0.15;
   --opacity-full: 1;
 
   --font-heading: "carol-gothic", sans-serif;
@@ -20,7 +20,8 @@
   --fs-h1-special: clamp(8.75rem, 4.375rem + 13.125vw, 15.625rem); /* ~250px */
 
   --fs-h1: clamp(8rem, 4rem + 10vw, 14.375rem); /* ~230px */
-  --fs-h2: clamp(2rem, 1.5rem + 2vw, 2.5rem);
+  --fs-h2: clamp(4rem, 1.5rem + 2vw, 2.5rem);
+  --fs-background: clamp(24rem, 4rem + 10vw, 40rem);
 
   --lh-body: 1.6;
 
@@ -75,24 +76,39 @@ h1 {
   color: var(--color-primary);
 }
 
-.chapterI__title--specialLetter,
-.chapterII__title--specialLetter,
-.chapterIII__title--specialLetter,
-.chapterIV__title--specialLetter {
-  color: var(--color-primary);
-}
 
 h2 {
   font-family: var(--font-heading);
   font-size: var(--fs-h2);
   line-height: 1.1;
-  display: flex;
-  justify-content: center;
 }
+
+.chapterI__title--specialLetter,
+.chapterII__title--specialLetter,
+.chapterIII__title--specialLetter,
+.chapterIV__title--specialLetter {
+  color: var(--color-primary);
+  
+}
+
 
 p {
   margin-inline: 4rem;
   margin-block-end: 1rem;
+}
+
+.background__text {
+  overflow: hidden;
+  color: #000000;
+  font-size: var(--fs-background);
+  opacity: var(--opacity-dim);
+  position: absolute;
+  inset-block-start: -18rem;
+  inset-inline-start: -6rem;
+  width: 100%;
+  font-family: var(--font-heading);
+  text-align: center;
+  z-index: -1;
 }
 
 /* .hero__navigation {
@@ -242,8 +258,6 @@ p {
   display: none;
 }
 
-
-
 .hamburger.no-js ~ .hero__navigation--list {
   display: flex;
   width: 100%;
@@ -280,7 +294,7 @@ p {
 
 .navigation__logo img {
   width: 4rem;
-  height: 4rem;
+  height: auto;
 }
 
 .navigation__item-wrapper {
@@ -306,19 +320,34 @@ p {
   display: none;
 }
 
+/* ===== Chapter I Styles ===== */
 .chapterI {
   margin-block: 4rem;
+  position: relative;
 }
+
 .chapterI__title {
-  margin-block: 2rem;
+  margin-block: 2rem; /* Keep your existing margin */
+  margin-inline: auto;
+  max-width: 80vw;
+  text-align: center;
 }
 
 .chapterI__image {
   width: 100%;
   height: auto;
 }
+
 .chapterI__paragraph {
   margin-block-end: 2rem;
 }
 
+.chapterI__paragraph--2 {
+  margin-block-start: -20vh;
+  margin-block-end: 6rem;
+}
+
+.wrapper {
+  position: relative;
+}
 

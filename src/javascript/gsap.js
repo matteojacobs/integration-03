@@ -1,11 +1,8 @@
-// In your hamburger.js or a new animations.js file
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Hero section animations
-function initHeroAnimations() {
-  // Split text for better animation control
-  const heroTitle = document.querySelector(".hero__title");
+const initHeroAnimations = () => {
+
   
   
 
@@ -27,6 +24,13 @@ function initHeroAnimations() {
     delay: 1.5,
   });
 
+  gsap.from(".hero__title", {
+    scale: 0,
+    duration: 1.5,
+    ease: "back.out(1.7)",
+    delay: 0.5,
+  });
+
   // Special letter animation
   gsap.from(".hero__title--specialLetter", {
     scale: 0,
@@ -38,7 +42,7 @@ function initHeroAnimations() {
 }
 
 // Navigation animations
-function initNavAnimations() {
+const initNavAnimations = () => {
   gsap.from(".navigation__item", {
     x: 100,
     opacity: 0,
@@ -49,33 +53,61 @@ function initNavAnimations() {
   });
 }
 
-// Chapter title animations
-function initChapterAnimations() {
-  gsap.utils.toArray("h2").forEach((chapter) => {
-    const specialChar = chapter.querySelector(".chapter__title--specialLetter");
-    
-
-    ScrollTrigger.create({
-      trigger: chapter,
-      start: "top center+=100",
-      onEnter: () => {
-        
-
-        if (specialChar) {
-          gsap.from(specialChar, {
-            scale: 0,
-            duration: 1,
-            ease: "elastic.out(1, 0.5)",
-          });
-        }
-      },
-    });
-  });
-}
-
 
   initHeroAnimations();
-  initChapterAnimations();
+  initNavAnimations();
 
 
 
+
+// Animate paragraphs
+gsap.utils.toArray('.chapterI__section').forEach((section) => {
+  gsap.from(section, {
+    opacity: 0.3,
+    x: -20,
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: section,
+      start: 'bottom 100%', // Start animation when the top of the paragraph is 80% in the viewport
+      
+      toggleActions: 'play none none reverse', // Play animation on enter, reverse on leave
+    },
+  });
+});
+
+
+
+
+
+
+
+// Create the main timeline
+const chapterIAnimation = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".chapterI__section--2",
+    start: "bottom 100%",
+    scrub: 1,
+    pin: true,
+    markers: false, // Set to true for debugging
+    anticipatePin: 1,
+  },
+});
+
+// Add animations to the timeline
+chapterIAnimation
+  .to(".chapterI__image--2", {
+    scale: 10,
+    duration: 2,
+    ease: "power2.inOut"
+  })
+  .to(".chapterI__section--2", {
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  }, "-=0.5") // Overlap with previous animation
+  .from(".chapterI__image--3", {
+    scale: 0,
+    opacity: 0,
+    duration: 1.5,
+    ease: "power2.out"
+  }, "<0.5"); // Start 0.5 seconds before previous animation ends

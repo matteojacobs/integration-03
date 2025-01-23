@@ -5,86 +5,97 @@
 
   /* ===== Navigation ===== */
 
-  .hero__navigation {
-    position: relative;
-  }
 
-  .hero__navigation--list {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    width: 60%;
-    margin-inline-start: auto;
-  }
+
+
 
   .no_js {
     display: none;
   }
 
+
+  .hero {
+    background: none;
+  }
   /* Navigation items styling */
-  .navigation__item {
-    border: none;
-    color: var(--color-text);
+.hero__navigation {
+    display: grid;
+    grid-template-columns: 1fr auto; /* First column takes remaining space, second column takes auto width */
+}
+
+.hero__navigation--list {
     transition: color 0.3s;
+    display: flex;
+    justify-content: flex-end;
+    width: 60vw;
+    padding: var(--space-xs) var(--space-sm);
+    grid-column: 2; /* Place the list in the second column */
+}
+
+  
+
+  .navigation__item {
+    padding-block: 0; /* Remove vertical padding */
+    border: none; /* Remove border */
+    width: auto; /* Reset width */
+    text-align: center; /* Align text to the left */
   }
 
-  /* Hover effects */
   .navigation__item:hover {
     color: var(--color-primary);
   }
 
-  .hero {
-    background-image: url("../assets/herogif.gif"), var(--color-radiant);
-    /* background-position: 100% 100%; */
-    background-position: 50vw 0rem, 60vw 40%;
-    /* background-size: 55vw auto, 40vw 40vw; */
-    background-size: 55vw auto, 40vw 40vw;
-    background-repeat: no-repeat;
-  }
-
   .hero__content {
-    flex-direction: row;
-    align-items: flex-start;
-    margin-inline: 4rem;
     display: flex;
-    flex-direction: column;
-    /* align-items: flex-start; */
-    text-align: left; /* Left margin from original mobile styles */
+    flex-direction: row;
+    margin-inline-start: 2rem;
+    padding: 0
   }
 
-  /* Style text container */
+    .hero__paragraph {
+      padding-block-start: 2rem;
+      max-width: 30vw;
+    }
+    .hero__paragraph, .hero__button {
+      margin-inline-start: 6rem;
+        }
+
+      
+    
+
+    .hero__title {
+    text-align: left;
+    margin: 0; 
+    }
+
+  
   .hero__content--text {
     display: flex;
     flex-direction: column;
-    /* align-items: flex-start; */
-    text-align: left; /* Left margin from original mobile styles */
-    width: 60%;
+    
+  }
+  
+
+
+
+  .hero__gif {
+    display: block;
+    background-image: var(--color-radiant);
+    background-size: 40vw 40vw;
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    background-repeat: no-repeat;
   }
 
-  /* Reset margins for desktop layout */
-  .hero__title {
-    margin-block-start: 0;
-    /* justify-content: flex-start; */
-  }
 
-  .hero__paragraph {
-    margin-block-start: 4rem;
-    max-width: 35vw;
-  }
-
-  .hero__paragraph,
-  .hero__button {
-    margin-inline-start: 8rem;
-  }
 
   /* ===== Hamburger ===== */
   .hamburger {
     display: none; /* Hidden by default */
   }
 
-  .hero__image--gif {
-    display: block;
-  }
+ 
 
 
 
@@ -93,53 +104,59 @@
 .chapterI {
     display: grid;
     grid-template-columns: 5vw 0.6fr 0.4fr 5vw;
-    grid-template-rows: repeat(1fr 20vh 20vh 1fr 40vh);
+    grid-template-rows: repeat(auto auto auto auto auto);
 }
 
 .chapterI__title { 
-    grid-area: 1 / 1 / 2 / 5; 
+    grid-column: 1 / -1;
 }
 
 .chapterI__section--1{
-    grid-area: 2 / 2 / 4 / 3;
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
 }
 
-.chapterI__section--2{
-    grid-area: 3 / 3 / 5 / 4;
+.chapterI__section--2 {
+    grid-column: 3 / 4;
+    grid-row: 3 / 5;
 }
 
 
 
 .chapterI__paragraph {
-    margin-block-end: 0;
-    max-width: 30rem;
+    padding-inline-start: 2rem;
+    max-width: 40vw;
 }
 .chapterI__paragraph--1 {
-    margin-block: -8rem 12rem;
-    margin-inline-start: 6vw;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
 }
 .chapterI__paragraph--2 {
-    margin-block-start: -40vh;
-    margin-inline-start: -6vw;
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
 }
 
 .chapterI__section--4 {
-    grid-area: 5 / 1 / 6 / 5;
+    grid-column: 1 / -1;
+    grid-row: 5 / 6;
+    grid-template-columns:5vw 0.6fr 0.4fr;
+    grid-template-rows: repeat(2, 1fr);
+    display: grid;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
 .chapterI__paragraph--3 {
-    margin-block-start: 10vh;
-    margin-inline-start: 11vw;
+  grid-area: 1 / 2 / 2 / 3;
 }
 
 .chapterI__paragraph--4 {
-    margin-block-start: 50vh;
-    margin-inline-start: 53vw
+  grid-area: 2 / 3 / 3 / 4;
 }
 
 .chapterI__image--interaction {
-    position: absolute;
+    grid-area: 1 / 1 / 3 / 5;
     inset-block-start: 0;
     z-index: -1;
 }

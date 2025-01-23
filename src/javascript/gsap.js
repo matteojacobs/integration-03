@@ -69,7 +69,7 @@ gsap.utils
       duration: 1.5,
       scrollTrigger: {
         trigger: section,
-        start: "top 95%",
+        start: "bottom bottom",
         toggleActions: "play none none reverse",
       },
     });
@@ -85,7 +85,7 @@ gsap.utils
       duration: 1.5,
       scrollTrigger: {
         trigger: paragraph,
-        start: "top 95%",
+        start: "bottom bottom",
         toggleActions: "play none none reverse",
       },
     });

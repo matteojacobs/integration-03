@@ -111,11 +111,16 @@
 
 
 .chapterI__paragraph {
+    margin-block-end: 0;
     max-width: 30rem;
 }
 .chapterI__paragraph--1 {
-    margin-block-start: -8rem;
+    margin-block: -8rem 12rem;
     margin-inline-start: 6vw;
+}
+.chapterI__paragraph--2 {
+    margin-block-start: -40vh;
+    margin-inline-start: -6vw;
 }
 
 .chapterI__section--4 {
@@ -124,31 +129,24 @@
 }
 
 .chapterI__paragraph--3 {
-    position: absolute;
     margin-block-start: 10vh;
     margin-inline-start: 11vw;
 }
 
 .chapterI__paragraph--4 {
-    position: absolute;
-    margin-block: 90vh;
-    margin-inline-start: 54vw;
+    margin-block-start: 50vh;
+    margin-inline-start: 53vw
 }
 
 .chapterI__image--interaction {
     position: absolute;
+    inset-block-start: 0;
     z-index: -1;
 }
 
 .chapterI__image--interaction--top {
   opacity: 0;
   transition: opacity 0.3s ease;
-  mask-image: radial-gradient(
-    circle at var(--x) var(--y),
-    black 0%, /* Fully visible at the center */
-    black 80px, /* Start fading out */
-    transparent 160px /* Fully hidden at the edge */
-  );
   -webkit-mask-image: radial-gradient(
     circle at var(--x) var(--y),
     black 0%, /* Fully visible at the center */
@@ -159,6 +157,7 @@
 }
 
 .chapterI__image--interaction--bg {
+    display: block;
     opacity: 0.1;
 }
 

@@ -19,7 +19,7 @@
   --fs-base: clamp(1rem, 0.96rem + 0.18vw, 1.125rem); /* 16px-18px */
   --fs-h1-special: clamp(8.75rem, 4.375rem + 13.125vw, 15.625rem); /* ~250px */
 
-  --fs-h1: clamp(8rem, 4rem + 10vw, 14.375rem); /* ~230px */
+  --fs-h1: clamp(6rem, 4rem + 10vw, 14.375rem); /* ~230px */
   --fs-h2: clamp(4rem, 1.5rem + 2vw, 2.5rem);
   --fs-background: clamp(24rem, 4rem + 10vw, 40rem);
 
@@ -97,7 +97,7 @@ h2 {
 
 
 p {
-  margin-inline: 4rem;
+  margin-inline: 10vw;
   margin-block-end: 1rem;
 }
 
@@ -142,6 +142,10 @@ p {
 
 } */
 
+.chapterI__image--interaction--bg {
+    display: none;
+}
+
 .hero__title {
   margin-block-start: 25vh;
   display: flex;
@@ -149,13 +153,12 @@ p {
 }
 
 .hero__paragraph {
-  margin-block-start: 12rem;
+  margin-block-start: 12vh;
 }
 
 .hero__paragraph,
 .hero__button {
-  margin-inline-start: 4rem;
-  max-width: 20rem;
+  margin-inline-start: 8vw;
 }
 
 .hero__button {

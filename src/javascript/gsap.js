@@ -61,7 +61,9 @@ const initNavAnimations = () => {
 
 
 gsap.utils
-  .toArray(".chapterI__section--1, .chapterI__section--2")
+  .toArray(
+    ".chapterI__section--1, .chapterI__section--2, .chapterII__section--2"
+  )
   .forEach((section) => {
     gsap.from(section, {
       opacity: 0.3,
@@ -69,7 +71,7 @@ gsap.utils
       duration: 1.5,
       scrollTrigger: {
         trigger: section,
-        start: "bottom bottom",
+        start: "50% bottom",
         toggleActions: "play none none reverse",
       },
     });
@@ -77,7 +79,7 @@ gsap.utils
 
 // Animate paragraphs --3 and --4
 gsap.utils
-  .toArray(".chapterI__paragraph--3, .chapterI__paragraph--4")
+  .toArray(".chapterI__paragraph--3, .chapterI__paragraph--4, .chapterII__paragraph--1")
   .forEach((paragraph) => {
     gsap.from(paragraph, {
       opacity: 0.3,
@@ -85,7 +87,7 @@ gsap.utils
       duration: 1.5,
       scrollTrigger: {
         trigger: paragraph,
-        start: "bottom bottom",
+        start: "50% bottom",
         toggleActions: "play none none reverse",
       },
     });
@@ -104,7 +106,6 @@ gsap.utils
 //     start: "bottom 100%",
 //     scrub: 1,
 //     pin: true,
-//     markers: false, // Set to true for debugging
 //     anticipatePin: 1,
 //   },
 // });
@@ -127,3 +128,5 @@ gsap.utils
 //     duration: 1.5,
 //     ease: "power2.out"
 //   }, "<0.5"); // Start 0.5 seconds before previous animation ends
+
+

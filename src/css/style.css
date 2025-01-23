@@ -328,14 +328,14 @@ p {
 
 /* ===== Chapter I Styles ===== */
 .chapterI {
-  margin-block: 4rem;
+  margin-block-start: 4rem;
   position: relative;
 }
 
-.chapterI__title {
+.chapterI__title, .chapterII__title {
   margin-block: 2rem; /* Keep your existing margin */
   margin-inline: auto;
-  max-width: 80vw;
+  max-width: 90vw;
   text-align: center;
 }
 
@@ -343,12 +343,13 @@ p {
   display: none;
 }
 
-.chapterI__image {
+.chapterI__image, .chapterII__image {
   width: 100%;
   height: auto;
 }
 
-.chapterI__paragraph {
+.chapterI__paragraph, .chapterII__paragraph {
+  margin-block-start: 2rem;
   margin-block-end: 2rem;
 }
 
@@ -357,7 +358,82 @@ p {
   margin-block-end: 6rem;
 }
 
-.wrapper {
+.chapterI__section--4 {
+  margin: 0;
+}
+
+.chapterII {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+
+.chapterII__title {
+  margin-block-start: 0;
+  padding-block-start: 2rem;
+}
+
+.chapterII__paragraph {
+  margin-block-start: 0rem;
+}
+
+
+
+/* ===== Animation Keyframes ===== */
+@keyframes hoverUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes shadowPulse {
+  0%, 100% {
+    opacity: 0.7;
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: translateX(-50%) scale(0.9);
+  }
+}
+
+/* ===== Image Container Styles ===== */
+.chapterII__image--wrapper {
   position: relative;
+  padding-block-end: 4rem;
+  display: block; /* Ensure proper container behavior */
+  overflow: visible; /* Allow shadow to extend beyond wrapper */
+}
+
+/* ===== Image Styles ===== */
+.chapterII__image--wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  animation: hoverUpDown 3s ease-in-out infinite;
+  will-change: transform; /* Optimize animation performance */
+  position: relative; /* Ensure proper stacking context */
+  z-index: 1; /* Keep image above shadow */
+}
+
+/* ===== Shadow Styles ===== */
+.chapterII__image--wrapper::after {
+  content: '';
+  position: absolute;
+  inset-block-end: 2rem;
+  inset-inline-start: 50%;
+  width: 80%;
+  height: 20px;
+  background: radial-gradient(ellipse at center, 
+    rgba(0,0,0,0.4) 0%,
+    rgba(0,0,0,0.3) 60%,
+    rgba(0,0,0,0) 100%);
+  transform: translateX(-50%);
+  filter: blur(8px);
+  animation: shadowPulse 3s ease-in-out infinite;
+  z-index: 0; /* Keep shadow below image */
 }
 

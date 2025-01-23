@@ -363,7 +363,7 @@ p {
   padding-block-start: var(--space-md);
 }
 
-.chapterI__title, .chapterII__title {
+.chapterI__title, .chapterII__title, .chapterIII__title {
   grid-column: 1 / -1;
   text-align: center;
   margin: 0;
@@ -374,18 +374,27 @@ p {
   display: none;
 }
 
-.chapterI__image, .chapterII__image {
+.background__text {
+  overflow: hidden;
+}
+
+.chapterI__image, .chapterII__image, .chapterIII__image {
   width: 100%;
   height: auto;
 }
 
-.chapterI__paragraph, .chapterII__paragraph {
+.chapterI__paragraph, .chapterII__paragraph, .chapterIII__paragraph {
   padding-inline: var(--space-md);
 }
 
 .chapterII {
   background-color: var(--color-white);
   color: var(--color-black);
+}
+
+.chapterIII__title {
+  padding-block: 10vh;
+  background: linear-gradient(to bottom, rgba(255, 248, 248, 1) 0%, rgba(255, 248, 248, 0) 100%);
 }
 
 

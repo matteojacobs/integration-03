@@ -79,7 +79,9 @@ gsap.utils
 
 // Animate paragraphs --3 and --4
 gsap.utils
-  .toArray(".chapterI__paragraph--3, .chapterI__paragraph--4, .chapterII__paragraph--1")
+  .toArray(
+    ".chapterI__paragraph--3, .chapterI__paragraph--4, .chapterII__paragraph--1, .chapterIII__paragraph--1 ,.chapterIII__paragraph--2, .chapterIII__paragraph--3"
+  )
   .forEach((paragraph) => {
     gsap.from(paragraph, {
       opacity: 0.3,

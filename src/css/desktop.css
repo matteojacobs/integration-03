@@ -1,6 +1,7 @@
 @media (min-width: 48rem) {
   :root {
     --fs-h2: clamp(2.5rem, 1.25rem + 4vw, 4rem); /* ~64px */
+    
   }
 
   /* ===== Navigation ===== */
@@ -132,14 +133,15 @@
     grid-row: 2 / 3;
 }
 .chapterI__paragraph--2 {
+    padding-inline-start: 2rem;
     grid-column: 3 / 4;
-    grid-row: 3 / 4;
+    grid-row: 3 / 5;
 }
 
 .chapterI__section--4 {
     grid-column: 1 / -1;
     grid-row: 5 / 6;
-    grid-template-columns:5vw 0.6fr 0.4fr;
+    grid-template-columns:5vw 0.6fr 0.4fr 5vw;
     grid-template-rows: repeat(2, 1fr);
     display: grid;
     justify-content: center;
@@ -152,7 +154,7 @@
 }
 
 .chapterI__paragraph--4 {
-  grid-area: 2 / 3 / 3 / 4;
+  grid-area: 2 / 3 / 3 / 5;
 }
 
 .chapterI__image--interaction {
@@ -186,7 +188,66 @@
     grid-area: 4 / 1 / 5 / 3;
 }
 
+.chapterII {
+  display: flex;
+  flex-direction: column;
+  
+}
 
+.chapterII__section--1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chapterII__image--1 {
+  padding-block-start: 4rem;
+  max-height: 40vh; /* Maximum height is 40% of the viewport height */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits within the constraints */
+}
+.chapterII__image--wrapper::after {
+  width: 40vw;
+}
+.chapterII__paragraph {
+  /* padding: 0; */
+  margin: 0;
+}
+
+.chapterII__paragraph--1 {
+  justify-content: center;
+  text-align: center;
+  max-width: 50vw;
+}
+
+.chapterII__section--2{
+  display: grid;
+  grid-template-columns:5vw 2fr 1fr 5vw;
+  grid-template-rows: 1fr 1fr auto;
+  align-items: center;
+
+}
+
+.chapterII__image--2 {
+  grid-area: 1 / 2 / 3 / 4;
+  height: auto;
+  width: 100%; /* Maintain aspect ratio */
+}
+
+
+
+.chapterII__paragraph--2 {
+  grid-area: 1 / 2 / 2 / 3;
+  padding-block-start: 12rem;
+  padding-inline: 6rem;
+  color: var(--color-text);
+}
+.chapterII__paragraph--3 {
+  grid-area: 3 / 2 / 4 / 4;
+  
+  padding-inline: 10vw;
+  text-align: center;
+}
 
 }
 

@@ -62,7 +62,7 @@ const initNavAnimations = () => {
 
 gsap.utils
   .toArray(
-    ".chapterI__section--1, .chapterI__section--2, .chapterII__section--2"
+    ".chapterI__section--1, .chapterI__section--2"
   )
   .forEach((section) => {
     gsap.from(section, {

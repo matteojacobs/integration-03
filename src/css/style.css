@@ -65,6 +65,10 @@ body {
   background-color: var(--color-bg);
 }
 
+.hidden {
+  display: none;
+}
+
 /* ===== Typography ===== */
 h1 {
   font-family: var(--font-heading);
@@ -359,12 +363,11 @@ p {
 
 
 /* ===== Chapter I Styles ===== */
-.chapterI, .chapterII {
+.chapterI, .chapterII, .chapterIV {
   padding-block-start: var(--space-md);
 }
 
-.chapterI__title, .chapterII__title, .chapterIII__title {
-  grid-column: 1 / -1;
+.chapterI__title, .chapterII__title, .chapterIII__title, .chapterIV__title {
   text-align: center;
   margin: 0;
 }
@@ -383,7 +386,7 @@ p {
   height: auto;
 }
 
-.chapterI__paragraph, .chapterII__paragraph, .chapterIII__paragraph {
+.chapterI__paragraph, .chapterII__paragraph, .chapterIII__paragraph, .chapterIV__paragraph, .interaction__wrapper {
   padding-inline: var(--space-md);
 }
 
@@ -461,3 +464,88 @@ p {
   z-index: 0; /* Keep shadow below image */
 }
 
+
+
+
+.interaction__wrapper {
+  display: flex;
+  color: var(--color-black);
+  flex-direction: column;
+  padding-inline: 10vw;
+  gap: 2rem;
+  align-items: stretch;
+  background-image: url(../assets/temporary7.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 95vw 100%;
+  
+}
+
+.cipherForm__row {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.cipherForm__row--1 {
+  margin-block-start: 4rem;
+}
+
+.interaction__title, .interaction__message {
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+
+
+
+#cipherForm {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: transparent;
+  width: 100%;
+}
+
+#pseudonym, #secretMessage {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: inherit;
+  padding: 0.8rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#cipherForm div {
+  display: flex;
+  gap: 1rem;
+  
+}
+
+#downloadSection {
+  gap: 1rem;
+}
+
+#downloadSection button, #cipherForm input[type="submit"] {
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-btn);
+  color: var(--color-text);
+  margin-block-end: 2rem;
+  padding: 1rem;
+  flex: 1;
+  cursor: pointer;
+  
+}
+
+
+.chapterIV__title {
+  padding-block-end: var(--space-md);
+}
+
+.interaction__wrapper {
+  padding-block: var(--space-lg);
+}

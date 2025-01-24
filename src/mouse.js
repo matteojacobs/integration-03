@@ -50,16 +50,21 @@ const animate = () => {
 animate();
 
 // Hover effects
-document.querySelectorAll("a, input").forEach((element) => {
-  element.addEventListener("mouseenter", () => {
-    trailElements.forEach((trail) => {
-      trail.style.transform = "scale(2.8)";
-      
+document
+  .querySelectorAll("a, input, textarea, hamburger")
+  .forEach((element) => {
+    element.addEventListener("mouseenter", () => {
+      trailElements.forEach((trail) => {
+        trail.style.transform = "scale(2.8)";
+      });
+    });
+    element.addEventListener("mouseleave", () => {
+      trailElements.forEach((trail) => {
+        trail.style.transform = "scale(1)";
+      });
     });
   });
-  element.addEventListener("mouseleave", () => {
-    trailElements.forEach((trail) => {
-      trail.style.transform = "scale(1)";
-    });
-  });
-});
+
+
+
+  

@@ -157,9 +157,8 @@
         <p class="background__text background__text--sectionIV">Pseudonym</p> 
 
         <div class="interaction__wrapper">
-          <h3 id="interaction__title" class="interaction__title hidden"></h3>
-          <p id="interaction__message" class="interaction__message hidden"></p>
-          <form id="cipherForm">
+          
+          <form class="cipherForm">
             <div class="cipherForm__row cipherForm__row--1">
             <label class="cipherForm__pseudonym" for="pseudonym">Pseudonym</label>
             <input class="cipherForm__pseudonym" type="text" id="pseudonym" name="pseudonym" placeholder="Your pseudonym here..">
@@ -173,13 +172,22 @@
               <input class="interaction__encrypt" type="submit" value="Encrypt">
             </div>
           </form>
-          <div id="downloadSection" class="hidden" >
-            <button id="downloadPdf">Download PDF</button>
-            <button id="doItAgain">New message</button>
+          
+          <div class="inter3__final hidden">
+            <div class="inter3__final--text">
+            <h3 class="inter3__pseudonym">name</h3>
+            <p class="inter3__message">Pseudonym</p>
+            </div>
+            <div class="inter3__final--buttons">
+              <a id="downloadPdf">Download PDF</a>
+              <a id="doItAgain">New message</a>
+            </div>
           </div>
+          
         </div>
         </article>
       </section>
+      <footer class="footer"></footer>
     <div class="cursor"></div>
     
     </div>

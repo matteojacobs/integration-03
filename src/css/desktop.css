@@ -172,7 +172,6 @@
     black 80px, /* Start fading out */
     transparent 160px /* Fully hidden at the edge */
   );
-  cursor: none;
 }
 
 .chapterI__image--interaction--bg {
@@ -291,6 +290,28 @@
   grid-area: 3 / 1 / 4 / 6;
 }
 
+.chapterIV__section {
+  display: flex;
+  padding-inline: 5vw;
+  position: relative;
+}
+
+/* Target the first paragraph */
+.chapterIV__paragraph.chapterIV__paragraph--1 {
+  order: 2; /* Moves to right side */
+  flex: 1; /* Takes remaining space */
+}
+
+.interaction__wrapper {
+  order: 1; /* Moves to left side */
+  width: 30vw;
+  padding-block: 0 5vh;
+  background-size: 100% 100%;
+}
+
+.background__text--sectionIV {
+  padding-block: 20rem;
+}
 
 }
 

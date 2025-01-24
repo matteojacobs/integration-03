@@ -34,7 +34,6 @@
   --radius-btn: 5px;
 
   --bp-mobile: 48em;
-  
 
   /* ===== Dark Mode (Default) ===== */
   --color-bg: var(--color-black);
@@ -66,10 +65,6 @@ body {
   background-color: var(--color-bg);
 }
 
-.hidden {
-  display: none;
-}
-
 /* ===== Typography ===== */
 h1 {
   font-family: var(--font-heading);
@@ -86,8 +81,7 @@ li {
   color: var(--color-primary);
 }
 
-
-h2 {
+h2, h3 {
   font-family: var(--font-heading);
   font-size: var(--fs-h2);
   line-height: 1.1;
@@ -98,7 +92,6 @@ h2 {
 .chapterIII__title--specialLetter,
 .chapterIV__title--specialLetter {
   color: var(--color-primary);
-  
 }
 
 .chapterI {
@@ -108,7 +101,6 @@ h2 {
 .hero__gif {
   display: none;
 }
-
 
 p {
   /* margin-inline: 10vw; */
@@ -144,7 +136,7 @@ p {
   position: relative;
   display: flex;
   flex-direction: column;
-  background:  url("../assets/heromobile.png"), var(--color-radiant);
+  background: url("../assets/heromobile.png"), var(--color-radiant);
   background-size: contain, 80vw 80vw;
   background-position: center;
   background-repeat: no-repeat;
@@ -175,7 +167,7 @@ p {
 } */
 
 .chapterI__image--interaction--bg {
-    display: none;
+  display: none;
 }
 
 /* .hero__title {
@@ -191,8 +183,6 @@ p {
   max-width: 90vw;
 }
 
-
-
 .hero__wrapper {
   padding-block: var(--space-lg);
   max-width: 65vw;
@@ -205,7 +195,6 @@ p {
   padding: 0.5rem;
   border-radius: 0.25rem;
   color: var(--color-white);
-  cursor: pointer;
   transition: background-color 0.2s;
 }
 
@@ -362,17 +351,20 @@ p {
   text-align: center;
 }
 
-
 /* ===== Chapter I Styles ===== */
-.chapterI, .chapterII, .chapterIV {
+.chapterI,
+.chapterII,
+.chapterIV {
   padding-block-start: var(--space-md);
 }
 
-.chapterI__title, .chapterII__title, .chapterIII__title, .chapterIV__title {
+.chapterI__title,
+.chapterII__title,
+.chapterIII__title,
+.chapterIV__title {
   text-align: center;
   margin: 0;
 }
-
 
 .background__text--grid {
   display: none;
@@ -382,12 +374,18 @@ p {
   overflow: hidden;
 }
 
-.chapterI__image, .chapterII__image, .chapterIII__image {
+.chapterI__image,
+.chapterII__image,
+.chapterIII__image {
   width: 100%;
   height: auto;
 }
 
-.chapterI__paragraph, .chapterII__paragraph, .chapterIII__paragraph, .chapterIV__paragraph, .interaction__wrapper {
+.chapterI__paragraph,
+.chapterII__paragraph,
+.chapterIII__paragraph,
+.chapterIV__paragraph,
+.interaction__wrapper {
   padding-inline: var(--space-md);
 }
 
@@ -398,18 +396,17 @@ p {
 
 .chapterIII__title {
   padding-block: 10vh;
-  background: linear-gradient(to bottom, rgba(255, 248, 248, 1) 0%, rgba(255, 248, 248, 0) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 248, 248, 1) 0%,
+    rgba(255, 248, 248, 0) 100%
+  );
 }
-
-
-
-
-
-
 
 /* ===== Animation Keyframes ===== */
 @keyframes hoverUpDown {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -418,7 +415,8 @@ p {
 }
 
 @keyframes shadowPulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.7;
     transform: translateX(-50%) scale(1);
   }
@@ -449,37 +447,35 @@ p {
 
 /* ===== Shadow Styles ===== */
 .chapterII__image--wrapper::after {
-  content: '';
+  content: "";
   position: absolute;
   inset-block-end: 2rem;
   inset-inline-start: 50%;
   width: 80%;
   height: 20px;
-  background: radial-gradient(ellipse at center, 
-    rgba(0,0,0,0.4) 0%,
-    rgba(0,0,0,0.3) 60%,
-    rgba(0,0,0,0) 100%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
   transform: translateX(-50%);
   filter: blur(8px);
   animation: shadowPulse 3s ease-in-out infinite;
   z-index: 0; /* Keep shadow below image */
 }
 
-
-
-
 .interaction__wrapper {
   display: flex;
   color: var(--color-black);
   flex-direction: column;
-  padding-inline: 10vw;
+  padding-inline: 5vw;
   gap: 2rem;
   align-items: stretch;
   background-image: url(../assets/temporary7.png);
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: 95vw 100%;
-  
+  background-size: 100% 100%;
 }
 
 .cipherForm__row {
@@ -489,48 +485,48 @@ p {
 }
 
 .cipherForm__row--1 {
-  margin-block-start: 4rem;
+  margin-block-start: 3rem;
 }
 
-.interaction__title, .interaction__message {
+.interaction__title,
+.interaction__message {
   background: transparent;
   border: none;
-  margin: 0;
-  padding: 0.5rem;
   width: 100%;
 }
 
-
-
-
-#cipherForm {
+.cipherForm {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   background: transparent;
-  width: 100%;
 }
 
-#pseudonym, #secretMessage {
+#pseudonym,
+#secretMessage {
   background: transparent;
   border: 1px solid rgba(0, 0, 0, 0.3);
   color: inherit;
   padding: 0.8rem;
-  width: 100%;
-  box-sizing: border-box;
 }
 
-#cipherForm div {
+form {
+  font-family: var(--font-body);
+}
+
+.cipherForm div {
   display: flex;
   gap: 1rem;
-  
 }
 
 #downloadSection {
+  display: none;
   gap: 1rem;
 }
 
-#downloadSection button, #cipherForm input[type="submit"] {
+.inter3__final a,
+.cipherForm input[type="submit"] {
+  font-family: var(--font-body);
   background: var(--color-primary);
   border: none;
   border-radius: var(--radius-btn);
@@ -538,11 +534,15 @@ p {
   margin-block-end: 2rem;
   padding: 1rem;
   flex: 1;
-  cursor: pointer;
-  
+  cursor: none;
 }
 
-
+.inter3__final a:hover,
+.cipherForm input[type="submit"]:hover {
+  background: none;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
 .chapterIV__title {
   padding-block-end: var(--space-md);
 }
@@ -551,20 +551,37 @@ p {
   padding-block: var(--space-lg);
 }
 
-
 body {
-    min-height: 100vh;
-    background: #1a1a1a;
-}
-
-.cursor {
-  display: none;
+  min-height: 100vh;
+  background: #1a1a1a;
 }
 
 .trail {
-    position: fixed;
-    background: var(--color-primary);
-    border-radius: 50%;
-    pointer-events: none;
-    transition: all 0.3s ease-out;
+  position: fixed;
+  background: var(--color-primary);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: all 0.3s ease-out;
+}
+
+
+
+.inter3__final--text {
+  padding-block: 2rem;
+}
+
+.inter3__pseudonym {
+  line-height: 0.9;
+}
+.inter3__final--buttons{
+  padding-block-end: 1rem;
+}
+
+.inter3__pseudonym::first-letter {
+  text-transform: capitalize;
+  color: var(--color-primary);
+}
+
+.hidden {
+  display: none !important;
 }

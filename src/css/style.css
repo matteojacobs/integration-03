@@ -55,6 +55,7 @@ html {
   font-size: 100%;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  cursor: none !important;
 }
 
 body {
@@ -548,4 +549,22 @@ p {
 
 .interaction__wrapper {
   padding-block: var(--space-lg);
+}
+
+
+body {
+    min-height: 100vh;
+    background: #1a1a1a;
+}
+
+.cursor {
+  display: none;
+}
+
+.trail {
+    position: fixed;
+    background: var(--color-primary);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: all 0.3s ease-out;
 }

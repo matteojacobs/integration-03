@@ -58,6 +58,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   font-family: var(--font-body);
   font-size: var(--fs-base);
   line-height: var(--lh-body);
@@ -351,6 +352,11 @@ p {
   text-align: center;
 }
 
+.background__text{
+  display: none;
+  overflow: hidden;
+}
+
 /* ===== Chapter I Styles ===== */
 .chapterI,
 .chapterII,
@@ -370,9 +376,7 @@ p {
   display: none;
 }
 
-.background__text {
-  overflow: hidden;
-}
+
 
 .chapterI__image,
 .chapterII__image,
@@ -548,7 +552,7 @@ form {
 }
 
 .interaction__wrapper {
-  padding-block: var(--space-lg);
+  padding-block-start: var(--space-lg);
 }
 
 body {
@@ -585,3 +589,42 @@ body {
 .hidden {
   display: none !important;
 }
+
+
+footer {
+  padding-inline: 5vw;
+  margin-block-start: 5vh;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.contact__info{
+  padding-block: 1rem;
+}
+
+.followUs {
+  padding-block-end: 1rem;
+}
+
+.contact__info h4, .followUs h4 {
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+.contact__info p {
+    padding: 0;
+}
+.contact__info a {
+    color: var(--color-black);
+}
+
+
+
+.nextStory {
+  color: var(--color-primary);
+}
+
+
+

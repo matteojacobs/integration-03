@@ -8,6 +8,9 @@
 
 
 
+.background__text {
+  display: block;
+}
 
 
   .no_js {
@@ -180,7 +183,7 @@
 }
 
 .background__text--grid {
-    overflow: visible;
+    overflow: hidden;
     display: block;
     inset-block-start: -10rem;
     inset-inline-start: -5rem;
@@ -285,7 +288,7 @@
 }
 
 .background__text--sectionIII {
-  overflow: visible;
+  overflow: hidden;
   margin-inline-start: -5rem;
   grid-area: 3 / 1 / 4 / 6;
 }
@@ -294,6 +297,7 @@
   display: flex;
   padding-inline: 5vw;
   position: relative;
+  overflow: hidden;
 }
 
 /* Target the first paragraph */
@@ -310,8 +314,36 @@
 }
 
 .background__text--sectionIV {
-  padding-block: 20rem;
+  padding-block-start: 20rem;
 }
+
+footer {
+  overflow: hidden;
+  position: relative;
+  padding: 4rem;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.contact__info, .followUs{
+  padding-block: 0rem;
+}
+
+.background__text--footer {
+  position: absolute;
+  justify-content: center;
+  z-index: 1000;
+  inset-inline: 0rem;
+  inset-block-start: -12rem;
+}
+
+.background__text--footer::first-letter {
+  color: var(--color-primary);
+}
+
+
+
 
 }
 

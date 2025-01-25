@@ -37,7 +37,8 @@ const updateTrail = () => {
     trail.style.width = `${size}px`;
     trail.style.height = `${size}px`;
     trail.style.opacity = 1 - (index / trailSegments) * 0.8;
-  });
+
+});
 }
 
 const animate = () => {

@@ -32,7 +32,7 @@
     display: flex;
     justify-content: flex-end;
     width: 60vw;
-    padding: var(--space-xs) var(--space-sm);
+    padding: var(--space-xs) 0;
     grid-column: 2; /* Place the list in the second column */
 }
 
@@ -327,20 +327,20 @@ footer {
 }
 
 .contact__info, .followUs{
+  z-index: 2;
   padding-block: 0rem;
 }
 
 .background__text--footer {
   position: absolute;
   justify-content: center;
-  z-index: 1000;
+  z-index: 0;
   inset-inline: 0rem;
   inset-block-start: -12rem;
+  opacity: 0.1;
 }
 
-.background__text--footer::first-letter {
-  color: var(--color-primary);
-}
+
 
 
 

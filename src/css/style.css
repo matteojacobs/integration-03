@@ -119,6 +119,8 @@ p {
   text-align: center;
   z-index: -1;
   max-width: 100vw;
+  display: none;
+  overflow: hidden;
 }
 
 /* .hero__navigation {
@@ -213,7 +215,7 @@ p {
   padding: var(--space-xs);
   background: transparent;
   border: 0;
-  cursor: pointer;
+  cursor: none;
   position: absolute;
   right: var(--space-sm);
   top: var(--space-sm);
@@ -352,10 +354,6 @@ p {
   text-align: center;
 }
 
-.background__text{
-  display: none;
-  overflow: hidden;
-}
 
 /* ===== Chapter I Styles ===== */
 .chapterI,
@@ -508,10 +506,14 @@ p {
 
 #pseudonym,
 #secretMessage {
-  background: transparent;
+  background: var(--color-white);
   border: 1px solid rgba(0, 0, 0, 0.3);
   color: inherit;
-  padding: 0.8rem;
+  padding: 1rem;
+}
+
+#secretMessage {
+  height: 20vh;
 }
 
 form {
@@ -623,8 +625,23 @@ footer {
 
 
 .nextStory {
+  font-weight: 700;
   color: var(--color-primary);
 }
 
 
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: transparent;
+    position: fixed;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    z-index: 1000;
+}
 
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: var(--color-primary);
+}

@@ -2,12 +2,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
 const initHeroAnimations = () => {
-
-  
-  
-
-  
-  
+  // Hero section animations
   gsap.from(".hero__paragraph", {
     y: 50,
     opacity: 0,
@@ -33,15 +28,22 @@ const initHeroAnimations = () => {
 
   // Special letter animation
   gsap.from(".hero__title--specialLetter", {
-    scale: 0,
     rotation: 360,
     duration: 1.5,
     ease: "back.out(1.7)",
     delay: 0.5,
   });
-}
 
-// Navigation animations
+  // Hero GIF animation
+  gsap.from(".hero__gif", {
+    opacity: 0,
+    scale: 0.8,
+    duration: 1.5,
+    ease: "power3.out",
+    delay: 1,
+  });
+};
+
 const initNavAnimations = () => {
   gsap.from(".navigation__item", {
     x: 100,
@@ -51,84 +53,283 @@ const initNavAnimations = () => {
     stagger: 0.1,
     delay: 0.5,
   });
-}
+};
+
+const initChapterIAnimations = () => {
+  // Chapter I animations
+  gsap.from(".chapterI__title", {
+    scrollTrigger: {
+      trigger: ".chapterI__title",
+      start: "top 80%",
+      end: "top 20%",
+      toggleActions: "play none none reverse",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+
+  gsap.from(".chapterI__image--1", {
+    scrollTrigger: {
+      trigger: ".chapterI__image--1",
+      start: "top 80%",
+      end: "top 20%",
+      toggleActions: "play none none reverse",
+    },
+    x: -100,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+
+  gsap.from(".chapterI__image--2", {
+    scrollTrigger: {
+      trigger: ".chapterI__image--2",
+      start: "top 80%",
+      end: "top 20%",
+      toggleActions: "play none none reverse",
+    },
+    x: -100,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+
+  gsap.from(".chapterI__paragraph--1", {
+    scrollTrigger: {
+      trigger: ".chapterI__paragraph--1",
+      start: "top 80%",
+      end: "top 20%",
+      toggleActions: "play none none reverse",
+    },
+    x: 100,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+
+  gsap.from(".chapterI__paragraph--2", {
+    scrollTrigger: {
+      trigger: ".chapterI__paragraph--2",
+      start: "top 80%",
+      end: "top 20%",
+      toggleActions: "play none none reverse",
+    },
+    x: -100,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+  gsap.from(".chapterI__paragraph--3", {
+    scrollTrigger: {
+      trigger: ".chapterI__paragraph--3",
+      start: "top 80%",
+      end: "top 20%",
+      toggleActions: "play none none reverse",
+    },
+    x: 100,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+  gsap.from(".chapterI__paragraph--4", {
+    scrollTrigger: {
+      trigger: ".chapterI__paragraph--4",
+      start: "top 80%",
+      end: "top 20%",
+      toggleActions: "play none none reverse",
+    },
+    x: -100,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+
+  // Add more animations for other elements in Chapter I as needed
+};
+
+const initChapterIIAnimations = () => {
+  // Chapter II animations
+  gsap.from(".chapterII__title", {
+    scrollTrigger: {
+      trigger: ".chapterII__title",
+      start: "top 80%",
+      end: "top 20%",
+      toggleActions: "play none none reverse",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+
+  gsap.from(".chapterII__image--1", {
+    scrollTrigger: {
+      trigger: ".chapterII__image--1",
+      start: "top 80%",
+      end: "top 20%",
+      toggleActions: "play none none reverse",
+    },
+    x: -100,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+
+  gsap.from(".chapterII__paragraph--1", {
+    scrollTrigger: {
+      trigger: ".chapterII__paragraph--1",
+      start: "top 80%",
+      end: "top 20%",
+      toggleActions: "play none none reverse",
+    },
+    y: 100,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+  
+  gsap.from(".chapterII__paragraph--2", {
+    scrollTrigger: {
+      trigger: ".chapterII__paragraph--2",
+      start: "top 80%",
+      end: "top 20%",
+      toggleActions: "play none none reverse",
+    },
+    x: 100,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+  gsap.from(".chapterII__paragraph--3", {
+    scrollTrigger: {
+      trigger: ".chapterII__paragraph--3",
+      start: "top 80%",
+      end: "top 20%",
+      toggleActions: "play none none reverse",
+    },
+    y: 100,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+
+  // Add more animations for other elements in Chapter II as needed
+};
+
+const initChapterIIIAnimations = () => {
+  // Chapter III animations
+  gsap.from(".chapterIII__title", {
+    scrollTrigger: {
+      trigger: ".chapterIII__title",
+      start: "top 80%",
+      end: "top 20%",
+      toggleActions: "play none none reverse",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+
+  gsap.from(".chapterIII__image", {
+    scrollTrigger: {
+      trigger: ".chapterIII__image",
+      start: "top 80%",
+      end: "top 20%",
+      toggleActions: "play none none reverse",
+    },
+    scale: 0.8,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+
+  gsap.from(".chapterIII__paragraph--1", {
+    scrollTrigger: {
+      trigger: ".chapterIII__paragraph--1",
+      start: "top 80%",
+      end: "top 20%",
+      toggleActions: "play none none reverse",
+    },
+    x: 50,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+  
+  gsap.from(".chapterIII__paragraph--2", {
+    scrollTrigger: {
+      trigger: ".chapterIII__paragraph--2",
+      start: "top 80%",
+      end: "top 20%",
+      toggleActions: "play none none reverse",
+    },
+    x: 50,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+  gsap.from(".chapterIII__paragraph--3", {
+    scrollTrigger: {
+      trigger: ".chapterIII__paragraph--3",
+      start: "top 80%",
+      end: "top 20%",
+      toggleActions: "play none none reverse",
+    },
+    x: 50,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+
+  // Add more animations for other elements in Chapter III as needed
+};
+
+const initChapterIVAnimations = () => {
+  // Chapter IV animations
+  gsap.from(".chapterIV__title", {
+    scrollTrigger: {
+      trigger: ".chapterIV__title",
+      start: "top 80%",
+      end: "top 20%",
+      toggleActions: "play none none reverse",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+
+  gsap.from(".chapterIV__paragraph--1", {
+    scrollTrigger: {
+      trigger: ".chapterIV__paragraph--1",
+      start: "top 80%",
+      end: "top 20%",
+      toggleActions: "play none none reverse",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+
+  // Add more animations for other elements in Chapter IV as needed
+};
 
 
+
+// Initialize all animations
+const initAnimations = () => {
   initHeroAnimations();
   initNavAnimations();
+  initChapterIAnimations();
+  initChapterIIAnimations();
+  initChapterIIIAnimations();
+  initChapterIVAnimations();
 
+};
 
-
-
-gsap.utils
-  .toArray(
-    ".chapterI__section--1, .chapterI__section--2"
-  )
-  .forEach((section) => {
-    gsap.from(section, {
-      opacity: 0.3,
-      x: -20,
-      duration: 1.5,
-      scrollTrigger: {
-        trigger: section,
-        start: "50% bottom",
-        toggleActions: "play none none reverse",
-      },
-    });
-  });
-
-// Animate paragraphs --3 and --4
-gsap.utils
-  .toArray(
-    ".chapterI__paragraph--3, .chapterI__paragraph--4, .chapterII__paragraph--1, .chapterIII__paragraph--1 ,.chapterIII__paragraph--2, .chapterIII__paragraph--3"
-  )
-  .forEach((paragraph) => {
-    gsap.from(paragraph, {
-      opacity: 0.3,
-      x: -20,
-      duration: 1.5,
-      scrollTrigger: {
-        trigger: paragraph,
-        start: "50% bottom",
-        toggleActions: "play none none reverse",
-      },
-    });
-  });
-
-
-
-
-
-
-
-// Create the main timeline
-// const chapterIAnimation = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".chapterI__section--2",
-//     start: "bottom 100%",
-//     scrub: 1,
-//     pin: true,
-//     anticipatePin: 1,
-//   },
-// });
-
-// // Add animations to the timeline
-// chapterIAnimation
-//   .to(".chapterI__image--2", {
-//     scale: 10,
-//     duration: 2,
-//     ease: "power2.inOut"
-//   })
-//   .to(".chapterI__section--2", {
-//     opacity: 0,
-//     duration: 1,
-//     ease: "power2.out"
-//   }, "-=0.5") // Overlap with previous animation
-//   .from(".chapterI__image--3", {
-//     scale: 0,
-//     opacity: 0,
-//     duration: 1.5,
-//     ease: "power2.out"
-//   }, "<0.5"); // Start 0.5 seconds before previous animation ends
-
-
+// Call the initialization function
+initAnimations();

@@ -80,6 +80,7 @@ li {
 .hero__title--specialLetter {
   font-size: var(--fs-h1-special);
   color: var(--color-primary);
+  display: inline-block;
 }
 
 h2, h3 {
@@ -396,14 +397,25 @@ p {
   color: var(--color-black);
 }
 
-.chapterIII__title {
-  padding-block: 10vh;
-  background: linear-gradient(
+.chapterIII {
+    background: linear-gradient(
     to bottom,
     rgba(255, 248, 248, 1) 0%,
-    rgba(255, 248, 248, 0) 100%
+    rgba(255, 248, 248, 0) 20%
   );
+
 }
+
+.chapterIII__title {
+  padding-block: 10vh;
+
+
+  
+}
+
+.chapterIII__image {
+    z-index: -1;
+  }
 
 /* ===== Animation Keyframes ===== */
 @keyframes hoverUpDown {
@@ -624,11 +636,21 @@ footer {
 
 
 
+
 .nextStory {
   font-weight: 700;
   color: var(--color-primary);
+  animation: scaleAnimation 1.5s infinite; /* Apply the animation */
 }
 
+@keyframes scaleAnimation {
+  0%, 100% {
+    transform: scale(1); /* Normal size */
+  }
+  50% {
+    transform: scale(1.2); /* Scaled up size */
+  }
+}
 
 .progress-container {
     width: 100%;

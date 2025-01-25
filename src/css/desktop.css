@@ -28,26 +28,21 @@
 }
 
 .hero__navigation--list {
-    transition: color 0.3s;
-    display: flex;
-    justify-content: flex-end;
-    width: 60vw;
-    padding: var(--space-xs) 0;
-    grid-column: 2; /* Place the list in the second column */
+  background-color: transparent;
+  grid-column: 2;
+  width: 60vw;
+  display: flex;
+  flex-direction: row;
 }
 
-  
+.navigation__item a {
+  padding: 0;
+  border: none;
+  transition: color 0.3s ease;
+}
 
-  .navigation__item {
-    padding-block: 0; /* Remove vertical padding */
-    border: none; /* Remove border */
-    width: auto; /* Reset width */
-    text-align: center; /* Align text to the left */
-  }
 
-  .navigation__item:hover {
-    color: var(--color-primary);
-  }
+
 
   .hero__content {
     display: flex;
@@ -188,6 +183,14 @@
     inset-block-start: -10rem;
     inset-inline-start: -5rem;
     grid-area: 4 / 1 / 5 / 3;
+}
+
+.hero__navigation--list {
+  display: flex;
+  justify-content: flex-end;
+  width: 60vw;
+  padding: var(--space-xs) 0;
+  grid-column: 2; /* Place the list in the second column */
 }
 
 .chapterII {

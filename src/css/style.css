@@ -53,6 +53,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   font-family: var(--font-body);
   font-size: var(--fs-base);
   line-height: var(--lh-body);
@@ -317,12 +318,7 @@ p {
 
 
 
-.chapterI__image,
-.chapterII__image,
-.chapterIII__image {
-  width: 100%;
-  height: auto;
-}
+
 
 .chapterI__paragraph,
 .chapterII__paragraph,
@@ -576,7 +572,9 @@ footer {
     color: var(--color-black);
 }
 
-.followUs a {
+.followUs img {
+  width: 40px;
+  height: 40px;
   padding-inline-end: 1rem;
   color: var(--color-black);
 }
@@ -589,7 +587,14 @@ footer {
   animation: scaleAnimation 1.5s infinite; /* Apply the animation */
 }
 
-
+@keyframes scaleAnimation {
+  0%, 100% {
+    transform: scale(1); /* Normal size */
+  }
+  50% {
+    transform: scale(1.2); /* Scaled up size */
+  }
+}
 
 .progress-container {
     width: 100%;

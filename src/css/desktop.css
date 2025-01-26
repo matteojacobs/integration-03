@@ -103,8 +103,7 @@
 .chapterI {
     display: grid;
     grid-template-columns: 5vw 0.6fr 0.4fr 5vw;
-    grid-template-rows: repeat(auto auto auto auto auto);
-}
+  grid-template-rows: repeat(5, auto);}
 
 .chapterI__title { 
     grid-column: 1 / -1;
@@ -166,6 +165,12 @@
 .chapterI__image--interaction--top {
   opacity: 0;
   transition: opacity 0.3s ease;
+  mask-image: radial-gradient(
+    circle at var(--x) var(--y),
+    black 0%, /* Fully visible at the center */
+    black 80px, /* Start fading out */
+    transparent 160px /* Fully hidden at the edge */
+  );
   -webkit-mask-image: radial-gradient(
     circle at var(--x) var(--y),
     black 0%, /* Fully visible at the center */

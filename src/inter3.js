@@ -3,12 +3,10 @@ const $interaction__message = document.querySelector(".inter3__message");
 const $secretMessage = document.querySelector("#secretMessage");
 const $interaction__title = document.querySelector(".inter3__pseudonym");
 const $downloadSection = document.querySelector(".inter3__final--buttons");
-const $downloadPdf = document.querySelector("#downloadPdf");
 const $doItAgain = document.querySelector("#doItAgain");
 const $inter3__final = document.querySelector(".inter3__final");
 const $pseudonym = document.querySelector("#pseudonym");
 
-// Modified Caesar Cipher function
 const caesarCipher = (text, decrypt = false) => {
   const shift = decrypt ? -3 : 3;
   return text.replace(/[a-zA-Z]/g, function (c) {
@@ -25,7 +23,6 @@ const decryptText = (text) => caesarCipher(text, true);
 const handleFormSubmit = (event) => {
   event.preventDefault();
 
-  // Validate form
   if (!$pseudonym.value || !$secretMessage.value) {
     alert("Please fill in both fields");
     return;
@@ -43,11 +40,9 @@ const handleFormSubmit = (event) => {
     console.log(result);
   }
 
-  // Update UI
   $interaction__title.textContent = $pseudonym.value;
   $interaction__message.textContent = result;
 
-  // Toggle visibility
   $form.classList.add("hidden");
   $inter3__final.classList.remove("hidden");
 };
@@ -55,7 +50,6 @@ const handleFormSubmit = (event) => {
 
 
 const doItAgain = () => {
-  // Reset form and UI
   $form.reset();
   $form.classList.remove("hidden");
   $downloadSection.classList.add("hidden");
@@ -63,7 +57,5 @@ const doItAgain = () => {
   $interaction__message.textContent = "";
 };
 
-// Event Listeners
 $form.addEventListener("submit", handleFormSubmit);
-$downloadPdf.addEventListener("click", downloadPdf);
 $doItAgain.addEventListener("click", doItAgain);

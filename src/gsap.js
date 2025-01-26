@@ -2,7 +2,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
 const initHeroAnimations = () => {
-  // Hero section animations
   gsap.from(".hero__paragraph", {
     y: 50,
     opacity: 0,
@@ -26,7 +25,6 @@ const initHeroAnimations = () => {
     delay: 0.5,
   });
 
-  // Special letter animation
   gsap.from(".hero__title--specialLetter", {
     rotation: 360,
     duration: 1.5,
@@ -34,7 +32,6 @@ const initHeroAnimations = () => {
     delay: 0.5,
   });
 
-  // Hero GIF animation
   gsap.from(".hero__gif", {
     opacity: 0,
     scale: 0.8,
@@ -56,7 +53,6 @@ const initNavAnimations = () => {
 };
 
 const initChapterIAnimations = () => {
-  // Chapter I animations
   gsap.from(".chapterI__title", {
     scrollTrigger: {
       trigger: ".chapterI__title",
@@ -146,11 +142,9 @@ const initChapterIAnimations = () => {
     ease: "power3.out",
   });
 
-  // Add more animations for other elements in Chapter I as needed
 };
 
 const initChapterIIAnimations = () => {
-  // Chapter II animations
   gsap.from(".chapterII__title", {
     scrollTrigger: {
       trigger: ".chapterII__title",
@@ -215,11 +209,9 @@ const initChapterIIAnimations = () => {
     ease: "power3.out",
   });
 
-  // Add more animations for other elements in Chapter II as needed
 };
 
 const initChapterIIIAnimations = () => {
-  // Chapter III animations
   gsap.from(".chapterIII__title", {
     scrollTrigger: {
       trigger: ".chapterIII__title",
@@ -284,11 +276,9 @@ const initChapterIIIAnimations = () => {
     ease: "power3.out",
   });
 
-  // Add more animations for other elements in Chapter III as needed
 };
 
 const initChapterIVAnimations = () => {
-  // Chapter IV animations
   gsap.from(".chapterIV__title", {
     scrollTrigger: {
       trigger: ".chapterIV__title",
@@ -315,12 +305,10 @@ const initChapterIVAnimations = () => {
     ease: "power3.out",
   });
 
-  // Add more animations for other elements in Chapter IV as needed
 };
 
 
 
-// Initialize all animations
 const initAnimations = () => {
   initHeroAnimations();
   initNavAnimations();
@@ -331,5 +319,4 @@ const initAnimations = () => {
 
 };
 
-// Call the initialization function
 initAnimations();

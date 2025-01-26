@@ -1,12 +1,10 @@
 document.addEventListener("mousemove", function (event) {
   const topLayer = document.querySelector(".chapterI__image--interaction--top");
-  const rect = topLayer.getBoundingClientRect(); // Get the element's position and size
+  const rect = topLayer.getBoundingClientRect(); 
 
-  // Calculate mouse position relative to the element
   const x = event.clientX - rect.left;
   const y = event.clientY - rect.top;
 
-  // Update CSS variables
   topLayer.style.setProperty("--x", `${x}px`);
   topLayer.style.setProperty("--y", `${y}px`);
   topLayer.style.opacity = 1;

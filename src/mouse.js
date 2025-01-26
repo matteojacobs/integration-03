@@ -4,7 +4,6 @@ const positions = Array(trailSegments)
   .fill()
   .map(() => ({ x: 0, y: 0 }));
 
-// Create trail elements
 for (let i = 0; i < trailSegments; i++) {
   const trail = document.createElement("div");
   trail.className = "trail";
@@ -50,7 +49,6 @@ const animate = () => {
 
 animate();
 
-// Hover effects
 document
   .querySelectorAll("a, input, textarea, hamburger")
   .forEach((element) => {

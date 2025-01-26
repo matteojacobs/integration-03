@@ -296,6 +296,12 @@ p {
     display: flex;
 }
 
+.error-message {
+  color: red;
+  display: none;
+  /* display: none; */
+}
+
 
 /* ===== Chapter I Styles ===== */
 .chapterI,

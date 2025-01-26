@@ -245,15 +245,17 @@
             <form class="cipherForm">
               <div class="cipherForm__row cipherForm__row--1">
                 <label class="cipherForm__pseudonym" for="pseudonym">Pseudonym</label>
-                <input class="cipherForm__pseudonym" type="text" id="pseudonym" name="pseudonym" placeholder="Your pseudonym here..">
+                <input class="cipherForm__pseudonym" type="text" id="pseudonym" name="pseudonym" placeholder="Your pseudonym here.." required>
+                <span class="error-message" id="pseudonym-error">This field should be filled in!</span>
               </div>
               <div class="cipherForm__row cipherForm__row--2">
                 <label class="cipherForm__secretMessage" for="secretMessage">Secret message</label>
-                <textarea class="cipherForm__secretMessage" id="secretMessage" name="secretMessage" placeholder="Write your message here.."></textarea>
+                <textarea class="cipherForm__secretMessage" id="secretMessage" name="secretMessage" placeholder="Encrypt your own message here, or decypher one..." required></textarea>
+                <span class="error-message" id="secretMessage-error">This field should be filled in!</span>
               </div>
               <div>
-                <input class="interaction__decipher" type="submit" value="Decipher">
                 <input class="interaction__encrypt" type="submit" value="Encrypt">
+                <input class="interaction__decipher" type="submit" value="Decipher">
               </div>
             </form>
 
@@ -263,7 +265,6 @@
                 <p class="inter3__message">Pseudonym</p>
               </div>
               <div class="inter3__final--buttons">
-                <a id="downloadPdf">Download PDF</a>
                 <a id="doItAgain">New message</a>
               </div>
             </div>

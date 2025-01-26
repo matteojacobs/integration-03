@@ -380,6 +380,8 @@ const $downloadSection = document.querySelector(".inter3__final--buttons");
 const $doItAgain = document.querySelector("#doItAgain");
 const $inter3__final = document.querySelector(".inter3__final");
 const $pseudonym = document.querySelector("#pseudonym");
+const $pseudonymError = document.querySelector("#pseudonym-error");
+const $secretMessageError = document.querySelector("#secretMessage-error");
 
 const caesarCipher = (text, decrypt = false) => {
   const shift = decrypt ? -3 : 3;
@@ -396,9 +398,13 @@ const decryptText = (text) => caesarCipher(text, true);
 
 const handleFormSubmit = (event) => {
   event.preventDefault();
-
   if (!$pseudonym.value || !$secretMessage.value) {
-    alert("Please fill in both fields");
+    if (!$pseudonym.value) {
+      $pseudonymError.style.display = "block";
+    }
+    if (!$secretMessage.value) {
+      $secretMessageError.style.display = "block";
+    }
     return;
   }
 
@@ -419,6 +425,7 @@ const handleFormSubmit = (event) => {
 
   $form.classList.add("hidden");
   $inter3__final.classList.remove("hidden");
+  $downloadSection.classList.remove("hidden"); // Ensure download section is visible
 };
 
 const doItAgain = () => {
@@ -431,6 +438,31 @@ const doItAgain = () => {
 
 $form.addEventListener("submit", handleFormSubmit);
 $doItAgain.addEventListener("click", doItAgain);
+
+const checkInput = (inputElement, errorElement) => {
+  if (inputElement.value.trim() === "") {
+    errorElement.style.display = "block";
+  } else {
+    errorElement.style.display = "none";
+  }
+};
+
+$pseudonym.addEventListener("input", () => {
+  checkInput($pseudonym, $pseudonymError);
+});
+
+$pseudonym.addEventListener("blur", () => {
+  checkInput($pseudonym, $pseudonymError);
+});
+
+$secretMessage.addEventListener("input", () => {
+  checkInput($secretMessage, $secretMessageError);
+});
+
+$secretMessage.addEventListener("blur", () => {
+  checkInput($secretMessage, $secretMessageError);
+});
+
 
 
 const trailSegments = 15;

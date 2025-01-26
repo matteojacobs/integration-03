@@ -45,6 +45,7 @@
 
 /* ===== Base Styles ===== */
 html {
+  overflow-x: hidden;
   font-size: 100%;
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -52,7 +53,6 @@ html {
 }
 
 body {
-  overflow-x: hidden;
   font-family: var(--font-body);
   font-size: var(--fs-base);
   line-height: var(--lh-body);
@@ -89,6 +89,8 @@ h2, h3 {
 .chapterI {
   position: relative;
 }
+
+
 
 .hero__gif {
   display: none;
@@ -582,14 +584,7 @@ footer {
   animation: scaleAnimation 1.5s infinite; /* Apply the animation */
 }
 
-@keyframes scaleAnimation {
-  0%, 100% {
-    transform: scale(1); /* Normal size */
-  }
-  50% {
-    transform: scale(1.2); /* Scaled up size */
-  }
-}
+
 
 .progress-container {
     width: 100%;

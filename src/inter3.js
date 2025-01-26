@@ -52,13 +52,7 @@ const handleFormSubmit = (event) => {
   $inter3__final.classList.remove("hidden");
 };
 
-// const downloadPdf = () => {
-//   const message = $interaction__message.textContent;
-//   const pseudonym = $interaction__title.textContent;
-//   const doc = new jsPDF();
-//   doc.text(`Pseudonym: ${pseudonym}\n\nMessage: ${message}`, 10, 10);
-//   doc.save("secret_message.pdf");
-// };
+
 
 const doItAgain = () => {
   // Reset form and UI

@@ -1,10 +1,11 @@
 @media (min-width: 48rem) {
   :root {
-    --fs-h2: clamp(2.5rem, 1.25rem + 4vw, 4rem); /* ~64px */
+    --fs-h2: clamp(2.5rem, 1.25rem + 4vw, 4rem);
+    
     
   }
 
-  /* ===== Navigation ===== */
+  
 
 
 
@@ -21,10 +22,10 @@
   .hero {
     background: none;
   }
-  /* Navigation items styling */
+  
 .hero__navigation {
     display: grid;
-    grid-template-columns: 1fr auto; /* First column takes remaining space, second column takes auto width */
+    grid-template-columns: 1fr auto;
 }
 
 .hero__navigation--list {
@@ -89,9 +90,9 @@
 
 
 
-  /* ===== Hamburger ===== */
+
   .hamburger {
-    display: none; /* Hidden by default */
+    display: none; 
   }
 
  
@@ -167,15 +168,15 @@
   transition: opacity 0.3s ease;
   mask-image: radial-gradient(
     circle at var(--x) var(--y),
-    black 0%, /* Fully visible at the center */
-    black 80px, /* Start fading out */
-    transparent 160px /* Fully hidden at the edge */
+    black 0%, 
+    black 80px,
+    transparent 160px 
   );
   -webkit-mask-image: radial-gradient(
     circle at var(--x) var(--y),
-    black 0%, /* Fully visible at the center */
-    black 80px, /* Start fading out */
-    transparent 160px /* Fully hidden at the edge */
+    black 0%, 
+    black 80px, 
+    transparent 160px
   );
 }
 

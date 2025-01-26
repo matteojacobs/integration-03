@@ -425,7 +425,7 @@ const handleFormSubmit = (event) => {
 
   $form.classList.add("hidden");
   $inter3__final.classList.remove("hidden");
-  $downloadSection.classList.remove("hidden"); // Ensure download section is visible
+  $downloadSection.classList.remove("hidden"); 
 };
 
 const doItAgain = () => {
@@ -530,6 +530,31 @@ document
     });
   });
 
+
+
+  
+  const setupMusicToggle = () => {
+    const musicButton = document.getElementById("musicButton");
+    const backgroundMusic = document.getElementById("backgroundMusic");
+
+    backgroundMusic.volume = 0.2;
+
+    musicButton.addEventListener("click", function () {
+
+      if (backgroundMusic.paused) {
+        backgroundMusic.play();
+        musicButton.classList.add("playing");
+      } else {
+        backgroundMusic.pause();
+        musicButton.classList.remove("playing");
+      }
+
+
+      this.blur();
+    });
+  };
+
+  setupMusicToggle();
 
 
   

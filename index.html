@@ -250,7 +250,7 @@
               </div>
               <div class="cipherForm__row cipherForm__row--2">
                 <label class="cipherForm__secretMessage" for="secretMessage">Secret message</label>
-                <textarea class="cipherForm__secretMessage" id="secretMessage" name="secretMessage" placeholder="Encrypt your own message here, or decypher one..." required></textarea>
+                <textarea class="cipherForm__secretMessage" id="secretMessage" name="secretMessage" placeholder="Encrypt or decypher your own message here..." required></textarea>
                 <span class="error-message" id="secretMessage-error">This field should be filled in!</span>
               </div>
               <div>
@@ -302,12 +302,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
-    <!-- <script type="module" src="src/hamburger.js"></script>
-    <script type="module" src="src/inter1.js"></script>
-    <script type="module" src="src/inter3.js"></script>
-    <script type="module" src="src/mouse.js"></script>
-    <script type="module" src="src/progressbar.js"></script>
-    <script type="module" src="src/gsap.js"></script> -->
+
     <script type="module" src="src/js.js"></script>
+
+
+  <button id="musicButton">
+      <img class="musicButton__image" src="src/assets/audio-svgrepo-com.svg" alt="Sound Off" id="soundIcon">
+  </button>
+
+  <audio id="backgroundMusic" loop>
+      <source src="src/assets/73_Medieval_Library.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+  </audio>
+
+
+
   </body>
 </html>

@@ -1,4 +1,4 @@
-/* ===== root ===== */
+
 :root {
   --color-primary: #b21d3b;
   --color-black: #1e1e1e;
@@ -35,7 +35,7 @@
 
   --bp-mobile: 48em;
 
-  /* ===== Dark Mode (Default) ===== */
+
   --color-bg: var(--color-black);
   --color-text: var(--color-white);
   --color-accent: var(--color-primary);
@@ -43,7 +43,7 @@
 
 
 
-/* ===== Base Styles ===== */
+
 html {
   overflow-x: hidden;
   font-size: 100%;
@@ -66,7 +66,7 @@ img {
   height: auto;
 }
 
-/* ===== Typography ===== */
+
 h1 {
   font-family: var(--font-heading);
   font-size: var(--fs-h1);
@@ -103,7 +103,7 @@ h2, h3 {
 }
 
 p {
-  /* margin-inline: 10vw; */
+
   padding-block-end: 1rem;
 }
 
@@ -175,7 +175,7 @@ p {
 }
 
 
-/* Hamburger Menu Styles */
+
 .hamburger {
   display: block;
   padding: var(--space-xs);
@@ -220,7 +220,7 @@ p {
   transform: translateY(0.5rem);
 }
 
-/* Active State */
+
 .hamburger--active .hamburger__inner {
   background-color: transparent;
 }
@@ -233,7 +233,7 @@ p {
   transform: translateY(0) rotate(-45deg);
 }
 
-/* Navigation List Styles */
+
 .hero__navigation--list {
   background-color: var(--color-black);
   display: none;
@@ -251,7 +251,7 @@ p {
   display: flex;
 }
 
-/* Logo Styles */
+
 .navigation__logo {
   position: absolute;
   background-color: var(--color-primary);
@@ -267,7 +267,7 @@ p {
   height: auto;
 }
 
-/* Navigation Item Styles */
+
 .navigation__item {
   width: 100%;
   text-align: center;
@@ -299,11 +299,10 @@ p {
 .error-message {
   color: red;
   display: none;
-  /* display: none; */
+  
 }
 
 
-/* ===== Chapter I Styles ===== */
 .chapterI,
 .chapterII,
 .chapterIV {
@@ -359,7 +358,7 @@ p {
     z-index: -1;
   }
 
-/* ===== Animation Keyframes ===== */
+
 @keyframes hoverUpDown {
   0%,
   100% {
@@ -382,26 +381,24 @@ p {
   }
 }
 
-/* ===== Image Container Styles ===== */
 .chapterII__image--wrapper {
   position: relative;
   padding-block-end: 4rem;
-  display: block; /* Ensure proper container behavior */
-  overflow: visible; /* Allow shadow to extend beyond wrapper */
+  display: block; 
+  overflow: visible; 
 }
 
-/* ===== Image Styles ===== */
+
 .chapterII__image--wrapper img {
   display: block;
   width: 100%;
   height: auto;
   animation: hoverUpDown 3s ease-in-out infinite;
-  will-change: transform; /* Optimize animation performance */
-  position: relative; /* Ensure proper stacking context */
-  z-index: 1; /* Keep image above shadow */
+  will-change: transform;
+  position: relative;
+  z-index: 1;
 }
 
-/* ===== Shadow Styles ===== */
 .chapterII__image--wrapper::after {
   content: "";
   position: absolute;
@@ -418,7 +415,7 @@ p {
   transform: translateX(-50%);
   filter: blur(8px);
   animation: shadowPulse 3s ease-in-out infinite;
-  z-index: 0; /* Keep shadow below image */
+  z-index: 0; 
 }
 
 .interaction__wrapper {
@@ -590,15 +587,15 @@ footer {
 .nextStory {
   font-weight: 700;
   color: var(--color-primary);
-  animation: scaleAnimation 1.5s infinite; /* Apply the animation */
+  animation: scaleAnimation 1.5s infinite; 
 }
 
 @keyframes scaleAnimation {
   0%, 100% {
-    transform: scale(1); /* Normal size */
+    transform: scale(1); 
   }
   50% {
-    transform: scale(1.2); /* Scaled up size */
+    transform: scale(1.2); 
   }
 }
 
@@ -622,4 +619,66 @@ footer {
 .highlight {
   color: var(--color-primary);
   font-weight: 700;
+}
+
+
+#musicButton {
+  position: fixed;
+  inset-block-end: var(--space-xs);
+  inset-inline-end: var(--space-xs);
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: none;
+  z-index: 1001;
+  transition: all 0.3s ease;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+  backdrop-filter: blur(4px);
+}
+
+.musicButton__image {
+  color: white;
+}
+
+#musicButton:hover {
+  transform: scale(1.1);
+}
+
+#musicButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+#soundIcon {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+
+#musicButton.playing::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
 }
